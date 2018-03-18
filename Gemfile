@@ -31,3 +31,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2018-03-12 21:02:35 -0400 by bruce_lesko:
 gem "faker", "~> 1.8"
+
+# Added at 2018-03-17 21:55:16 -0400 by bruce_lesko:
+gem "friendly_id", "~> 5.2"
