@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   def index
     @portfolio_items = Portfolio.all
@@ -10,6 +10,15 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+  end
+
+  def toggle_status
+     if @portfolio_item.draft?
+       @portfolio_item.published!
+     elsif @portfolio_item.published?
+       @portfolio_item.draft!
+     end
+    redirect_to portfolios_path, notice: 'Portfolio status updated.'
   end
 
   def create
