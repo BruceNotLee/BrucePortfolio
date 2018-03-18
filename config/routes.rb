@@ -23,7 +23,9 @@ Rails.application.routes.draw do
      get :toggle_status
    end
 
-   get 'search/:search', to: 'pages#search'
+   get 'search/:keyword', to: 'pages#search'
+   get 'search/:keyword/:keyword1', to: 'pages#search'
+   get 'search/:keyword/:keyword1/:keyword2', to: 'pages#search'
 
    root to: 'pages#home'
 end
