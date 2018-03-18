@@ -3,6 +3,11 @@ class PortfoliosController < ApplicationController
 
   def index
     @portfolio_items = Portfolio.all
+    @ruby = Portfolio.ruby
+    @rails = Portfolio.rails
+    @javascript = Portfolio.javascript
+    @html = Portfolio.html
+    @css = Portfolio.css
   end
 
   def show

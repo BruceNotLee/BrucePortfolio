@@ -1,7 +1,16 @@
+3.times do |x|
+  language = Faker::SiliconValley.company
+  Topic.create!(
+    title: "#{language}"
+  )
+  puts "Topic #{language} created"
+end
+
 9.times do |x|
  Blog.create!(
   title: "#{Faker::SiliconValley.company}",
-  body: "#{Faker::SiliconValley.motto}"
+  body: "#{Faker::SiliconValley.motto}",
+  topic_id: Topic.last.id
   )
 end
 
