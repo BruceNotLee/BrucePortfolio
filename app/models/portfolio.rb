@@ -6,6 +6,9 @@ class Portfolio < ApplicationRecord
   friendly_id :title, use: :slugged
   validates_presence_of :title, :body, :thumb_image, :main_image
 
+  accepts_nested_attributes_for :technologies,
+    reject_if: lambda { |attr| attr['name'].blank? }
+
   scope :ruby, -> { where(subtitle: 'Ruby') }
   scope :rails, -> { where(subtitle: 'Ruby on Rails') }
   scope :javascript, -> { where(subtitle: 'JavaScript') }
