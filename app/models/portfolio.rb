@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   enum status: { draft: 0, published: 1 }
   extend FriendlyId
   friendly_id :title, use: :slugged
@@ -13,7 +14,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= "http://via.placeholder.com/600x600"
-    self.thumb_image ||= "http://via.placeholder.com/300x300"
+    self.main_image ||= Placeholder.image_generator(height: 600, width: 600)
+    self.thumb_image ||= Placeholder.image_generator(height: 300, width: 300)
   end
 end
