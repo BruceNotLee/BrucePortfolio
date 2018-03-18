@@ -1,8 +1,12 @@
+<div class="row">
 <h1>Portfolio Items</h1>
-<% @portfolio_items.each do |item| %>
-  <h3><%= item.title %></h3>
-  <%= image_tag item.thumb_image %>
-  <h5><%= item.subtitle %></h5>
-  <p><%= item.body %></p>
+  <% @portfolio_items.each do |item| %>
+  <div class="col s12 m6 l4 xl3">
+    <h3><%= item.title %></h3>
+    <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
+    <h5><%= item.subtitle %></h5>
+    <p><%= item.body %></p>
+  </div>
+</div>
 
 <% end %>
