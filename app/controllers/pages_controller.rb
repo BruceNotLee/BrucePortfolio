@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 
   def privacy
   end
+
+  def search
+    @search = params[:search]
+  end
 end
