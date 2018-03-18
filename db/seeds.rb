@@ -30,3 +30,9 @@ end
     percent_utilized: 100
   )
 end
+
+3.times do |x|
+  Portfolio.last.technologies.create!(
+    name: "#{Faker::SiliconValley.invention}"
+  )
+end

@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  has_many :technologies
   include Placeholder
   enum status: { draft: 0, published: 1 }
   extend FriendlyId
