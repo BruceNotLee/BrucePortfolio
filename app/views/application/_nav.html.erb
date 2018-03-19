@@ -1,11 +1,20 @@
+<% if current_user.name.nil? %>
+  <% username = current_user.email %>
+<% else %>
+  <% username = current_user.name %>
+<% end %>
 <nav>
   <div class="nav-wrapper blue-grey darken-4">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <%= link_to 'Home', root_path %>
+    <ul id="nav-mobile" class="right">
       <!-- Use Link_to -->
-      <li><a href="#">Sass</a></li>
-      <li><a href="#">Components</a></li>
-      <li><a href="#">JavaScript</a></li>
+      <% if current_user %>
+        <li><%= link_to "#{username}",edit_user_registration_path %></li>
+        <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Register', new_user_registration_path %></li>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
