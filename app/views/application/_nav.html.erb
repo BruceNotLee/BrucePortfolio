@@ -1,15 +1,10 @@
-<% if current_user.name.nil? %>
-  <% username = current_user.email %>
-<% else %>
-  <% username = current_user.name %>
-<% end %>
 <nav>
   <div class="nav-wrapper blue-grey darken-4">
     <%= link_to 'Home', root_path %>
     <ul id="nav-mobile" class="right">
       <!-- Use Link_to -->
       <% if current_user %>
-        <li><%= link_to "#{username}",edit_user_registration_path %></li>
+        <li><%= link_to "#{current_user.name}",edit_user_registration_path %></li>
         <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to 'Register', new_user_registration_path %></li>
