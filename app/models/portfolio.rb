@@ -10,13 +10,8 @@ class Portfolio < ApplicationRecord
     reject_if: lambda { |attr| attr['name'].blank? }
 
   scope :ruby, -> { where(subtitle: 'Ruby') }
-  scope :rails, -> { where(subtitle: 'Ruby on Rails') }
-  scope :javascript, -> { where(subtitle: 'JavaScript') }
-  scope :html, -> { where(subtitle: 'HTML') }
-  scope :css, -> { where(subtitle: 'CSS') }
 
   after_initialize :set_defaults
-
   def set_defaults
     self.main_image ||= Placeholder.image_generator(height: 600, width: 600)
     self.thumb_image ||= Placeholder.image_generator(height: 300, width: 300)
