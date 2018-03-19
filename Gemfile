@@ -14,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -34,3 +34,6 @@ gem "faker", "~> 1.8"
 
 # Added at 2018-03-17 21:55:16 -0400 by bruce_lesko:
 gem "friendly_id", "~> 5.2"
+
+# Added at 2018-03-18 21:16:56 -0400 by bruce_lesko:
+gem "devise", "~> 4.4"
