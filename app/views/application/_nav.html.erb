@@ -4,7 +4,7 @@
     <ul id="nav-mobile" class="right">
       <!-- Use Link_to -->
       <% if current_user %>
-        <li><%= link_to "#{current_user.name}",edit_user_registration_path %></li>
+        <li><%= link_to "#{current_user.first_name}",edit_user_registration_path %></li>
         <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to 'Register', new_user_registration_path %></li>

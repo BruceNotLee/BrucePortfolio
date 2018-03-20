@@ -1,5 +1,5 @@
 <h1>Home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p>Hi <%= current_user.first_name if current_user %>, thank you for visiting my portfolio site.  If you have any questions please contact me.</p>
 
 <h2>Posts</h2>
 <%= @posts.inspect %>
