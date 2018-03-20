@@ -3,7 +3,7 @@
     <%= link_to 'Home', root_path %>
     <ul id="nav-mobile" class="right">
       <!-- Use Link_to -->
-      <% if current_user %>
+      <% if current_user.is_a?(User) %>
         <li><%= link_to "#{current_user.first_name}",edit_user_registration_path %></li>
         <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
       <% else %>
