@@ -5,12 +5,15 @@ class PagesController < ApplicationController
   end
 
   def about
+    @page_title = "Bruce Lesko | About"
   end
 
   def contact
+    @page_title = "Bruce Lesko | Contact"
   end
 
   def privacy
+    @page_title = "Bruce Lesko | Privacy"
   end
 
   def search

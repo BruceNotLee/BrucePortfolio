@@ -6,6 +6,8 @@ class PortfoliosController < ApplicationController
   end
 
   def show
+    @page_title = "Bruce Lesko | #{@portfolio_item.title}"
+    @seo_keywords = @portfolio_item.title
   end
 
   def new
@@ -62,7 +64,7 @@ class PortfoliosController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
       params.require(:portfolio).permit(
-        :title, 
+        :title,
         :subtitle,
         :body,
         technologies_attributes: [:name])

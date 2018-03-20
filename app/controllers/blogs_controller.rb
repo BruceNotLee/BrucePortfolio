@@ -3,9 +3,12 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @page_title = "Bruce Lesko | Posts"
   end
 
   def show
+    @page_title = "Bruce Lesko | #{@blog.title}"
+    @seo_keywords = @blog.title
   end
 
   def new
