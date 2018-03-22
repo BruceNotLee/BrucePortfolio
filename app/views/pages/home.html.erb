@@ -1,8 +1,11 @@
 <h1>Home</h1>
-<p>Hi <%= current_user.first_name if current_user %>, thank you for visiting my portfolio site.  If you have any questions please contact me.</p>
+<p>Hi <%= current_user.first_name if current_user %>, thank you for visiting my portfolio site.  If you have any questions please <%= link_to "contact", contact_path %> me.</p>
 
-<h2>Posts</h2>
-<%= @posts.inspect %>
+<h3>Portfolio</h3>
+<%= @portfolio %>
 
-<h2>Skills</h2>
-<%= @skills.inspect %>
+<h3>Posts</h3>
+<%= @posts %>
+
+<h3>Skills</h3>
+<%= @skills %>
