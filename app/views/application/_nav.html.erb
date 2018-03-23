@@ -3,12 +3,6 @@
     <%= link_to 'Home', root_path %>
     <%= link_to "Portfolio", portfolios_path %>
     <%= link_to "Posts", blogs_path %>
-    <% if current_user.is_a?(User) %>
-      <%= link_to "#{current_user.first_name}", edit_user_registration_path %>
-      <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Register', new_user_registration_path %>
-      <%= link_to 'Login', new_user_session_path %>
-    <% end %>
+    <%= login_helper %>
   </div>
 </nav>
