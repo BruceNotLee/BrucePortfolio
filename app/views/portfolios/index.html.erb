@@ -1,22 +1,18 @@
-
 <h1>Portfolio Items</h1>
-<div class="row left-align create_new_portfolio">
-  <div class="col s12">
-    <%= link_to "Create New Portfolio", new_portfolio_path %>
-  </div>
-</div>
-<div class="row center">
-  <% @portfolio_items.each do |item| %>
-  <div class="col s12 m6 l4 xl3">
+<p><%= link_to "Create New Portfolio", new_portfolio_path %></p>
 
-    <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
-    <h3><%= link_to item.title, portfolio_show_path(item) %></h3>
-    <h5><%= item.subtitle %></h5>
-    <p><%= item.body %></p>
-    <p class="left-align"><%= link_to "Edit #{item.title}", edit_portfolio_path(item) %> <br>
-    <%= link_to item.status, toggle_status_portfolio_path(item) %><br>
-    <%= link_to "Delete", portfolio_path(item), method: :delete, data: { confirm: "Are you sure?"} %> </p>
-
-  </div>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Thumbnail</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Body</th>
+      <th>Created</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+  </tbody>
+</table>

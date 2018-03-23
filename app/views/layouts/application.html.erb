@@ -29,9 +29,7 @@
     </footer>
     <hr>
     <%= params %>
-    <hr>
-    <% if session[:source] %>
-    Thanks for visiting from <%= session[:source] %>!
-    <% end %>
+    <!-- where visitor came from ?q=source -->
+    <%= source_helper %>
   </body>
 </html>
