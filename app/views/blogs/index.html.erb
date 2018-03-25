@@ -1,17 +1,7 @@
 <h1>Posts</h1>
 <p><%= link_to 'New Blog', new_blog_path %></p>
 <p id="notice"><%= notice %></p>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Created</th>
-      <th>Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @blogs %>
-  </tbody>
-</table>
-<br>
+
+<div class="">
+  <%= render partial: @blogs, spacer_template: 'spacer' %>
+</div>
