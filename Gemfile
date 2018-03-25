@@ -18,7 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # invoke with binding.pry
-  gem "pry-byebug", "~> 3.6", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "pry-byebug", "~> 3.6"
 end
 
 group :development do
@@ -38,3 +39,9 @@ gem "friendly_id", "~> 5.2"
 
 # Added at 2018-03-18 21:16:56 -0400 by bruce_lesko:
 gem "devise", "~> 4.4"
+
+# Added at 2018-03-24 21:44:15 -0400 by bruce_lesko:
+gem "bootstrap", "~> 4.0"
+
+# Added at 2018-03-24 21:55:03 -0400 by bruce_lesko:
+gem "jquery-rails", "~> 4.3"
