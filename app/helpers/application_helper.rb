@@ -5,7 +5,7 @@ module ApplicationHelper
       " ".html_safe +
       (link_to 'Login', new_user_session_path)
     else
-      (link_to "#{current_user.first_name}", edit_user_registration_path) +
+      (link_to "#{current_user.first_name}(#{current_user.role})", edit_user_registration_path) +
       " ".html_safe +
       (link_to 'logout', destroy_user_session_path, method: :delete)
     end
