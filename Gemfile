@@ -17,7 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # invoke with binding.pry
+  gem "pry-byebug", "~> 3.6", platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
