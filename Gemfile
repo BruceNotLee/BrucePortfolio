@@ -47,3 +47,6 @@ gem "bootstrap", "~> 4.0"
 gem "jquery-rails", "~> 4.3"
 
 gem 'dynamic_portfolio_copyright', '~> 0.1.0'
+
+# Added at 2018-03-25 16:00:08 -0400 by bruce_lesko:
+gem "petergate", "~> 1.8"
