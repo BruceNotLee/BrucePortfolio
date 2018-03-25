@@ -17,4 +17,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "greeting")
     end
   end
+
+  def set_copyright
+    DynamicPortfolioCopyright::Renderer.copyright 'Bruce Lesko', 'All Rights Reserved'
+  end
 end

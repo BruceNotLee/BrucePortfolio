@@ -45,3 +45,5 @@ gem "bootstrap", "~> 4.0"
 
 # Added at 2018-03-24 21:55:03 -0400 by bruce_lesko:
 gem "jquery-rails", "~> 4.3"
+
+gem 'dynamic_portfolio_copyright', '~> 0.1.0'

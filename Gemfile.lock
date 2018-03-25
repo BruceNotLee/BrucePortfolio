@@ -58,6 +58,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dynamic_portfolio_copyright (0.1.0)
     erubi (1.7.1)
     execjs (2.7.0)
     faker (1.8.7)
@@ -189,6 +190,7 @@ DEPENDENCIES
   bootstrap (~> 4.0)
   byebug
   devise (~> 4.4)
+  dynamic_portfolio_copyright (~> 0.1.0)
   faker (~> 1.8)
   friendly_id (~> 5.2)
   jbuilder (~> 2.5)
