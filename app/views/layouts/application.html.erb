@@ -5,8 +5,7 @@
     <meta name="keywords" content="<%= @seo_keywords %>">
     <%= csrf_meta_tags %>
     <!-- Google Font Roboto -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- optimized for mobile-->
@@ -21,7 +20,9 @@
       <div class="notice"><%= notice %></div>
       <div class="alert"><%= alert %></div>
       <div>
+        <%# cache do %>
         <%= yield %>
+        <%# end %>
       </div>
     </main>
     <footer>
