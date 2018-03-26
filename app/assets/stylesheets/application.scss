@@ -5,6 +5,49 @@ body {
   font-family: 'Roboto', sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-  background-color: #051427de;
-  color: snow;
+  background-color: #1a1a1a;
+  color: #fff;
+  line-height: 1;
+}
+
+p {
+  margin-bottom: .5rem;
+}
+
+// alerts
+.alert {
+  position: fixed;
+}
+
+// Navigation
+.masthead-brand {
+  background-color: #000;
+  margin: 0px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.nav.nav-masthead {
+background-color: #141414;
+}
+
+.card-body  {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.list-group {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.list-group-item {
+  background-color: #fff;
+  color: #1a1a1a;
 }

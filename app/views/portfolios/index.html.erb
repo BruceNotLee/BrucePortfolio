@@ -1,18 +1,11 @@
-<h1>Portfolio Items</h1>
 <p><%= link_to "Create New Portfolio", new_portfolio_path if logged_in?(:site_admin) %></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Thumbnail</th>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Body</th>
-      <th>Created</th>
-      <th>Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-  </tbody>
-</table>
+<div class="projects-clean">
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Projects </h2>
+    </div>
+    <div class="row projects">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>

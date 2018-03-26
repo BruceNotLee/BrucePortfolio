@@ -1,14 +1,17 @@
+<div class="col-sm-6 col-lg-4 item">
+  <div class="card">
+    <%= image_tag portfolio_item.thumb_image, :class => "img-fluid card-img-top" unless portfolio_item.thumb_image.nil? %>
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h5>
+      <p class="card-text">
+        <%= portfolio_item.subtitle %>
+        <%= portfolio_item.body %>
+      </p>
+      <p class="font-sm">created <%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %> ago</p>
+      <%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
+      <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %>
+      <%= link_to portfolio_item.status, toggle_status_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
+    </div>
 
-
-<tr>
-  <td><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></td>
-  <td><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></td>
-  <td><%= portfolio_item.subtitle %></td>
-  <td><%= portfolio_item.body %></td>
-  <td><%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %> ago</td>
-  <td>
-    <%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
-    <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %>
-    <%= link_to portfolio_item.status, toggle_status_portfolio_path(portfolio_item) %>
-  </td>
-</tr>
+  </div>
+</div>

@@ -1,11 +1,16 @@
 <% item = @portfolio_item %>
-  <%= image_tag item.main_image unless item.thumb_image.nil? %>
-  <h3><%= item.title %></h3>
-  <h5><%= item.subtitle %></h5>
-  <p><%= item.body %></p>
-  <p><%= link_to "Edit", edit_portfolio_path(item) if logged_in?(:site_admin) %>
-  </p>
-  <h5>Technologies Used</h5>
-  <% item.technologies.each do |t| %>
-    <p><%= t.name %></p>
-  <% end %>
+<div class="card" style="width: 100%;">
+  <%= image_tag item.main_image, :class => "card-img-top" unless item.thumb_image.nil? %>
+  <div class="card-body">
+    <h5 class="card-title"><%= item.title %></h5>
+    <p class="card-text"><%= item.subtitle %> <%= item.body %></p>
+  </div>
+  <ul class="list-group list-group-flush"> Technologies Used
+    <% item.technologies.each do |t| %>
+    <li class="list-group-item"><%= t.name %></li>
+    <% end %>
+  </ul>
+  <div class="card-body">
+    <%= link_to "Edit", edit_portfolio_path(item), :class => "card-link" if logged_in?(:site_admin) %>
+  </div>
+</div>
