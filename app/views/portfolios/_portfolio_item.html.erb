@@ -7,8 +7,8 @@
   <td><%= portfolio_item.body %></td>
   <td><%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %> ago</td>
   <td>
-    <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
-    <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?"} %>
+    <%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
+    <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %>
     <%= link_to portfolio_item.status, toggle_status_portfolio_path(portfolio_item) %>
   </td>
 </tr>
