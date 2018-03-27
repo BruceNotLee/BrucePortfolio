@@ -19,6 +19,10 @@ p {
   position: fixed;
 }
 
+.notice {
+  position: fixed;
+}
+
 // Navigation
 .masthead-brand {
   background-color: #000;
@@ -50,4 +54,29 @@ background-color: #141414;
 .list-group-item {
   background-color: #fff;
   color: #1a1a1a;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.large-home {
+  background-image: url("/assets/code.png");
+}
+
+.parallax-projects {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-image: url("/assets/projects.png");
 }
