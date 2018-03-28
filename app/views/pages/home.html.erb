@@ -6,6 +6,7 @@
       <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
     </div>
     <hr>
+    <%= link_to "Features", about_path, :class => "h2 nav-link text-center" %>
     <div class="row features">
       <div class="col-sm-6 col-lg-4 item">
         <h3 class="name">
@@ -54,11 +55,11 @@
 </div>
 
 <div class="projects-clean">
+  <div class="parallax parallax-projects">
+  </div>
   <div class="container">
-    <div class="parallax-projects">
-    </div>
     <div class="intro">
-      <h2 class="text-center">Projects </h2>
+      <%= link_to "Projects", portfolios_path, :class => "h2 nav-link text-center" %>
     </div>
     <div class="row projects">
       <%= render partial: 'portfolios/portfolio_item', collection: @portfolio_items %>

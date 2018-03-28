@@ -1,17 +1,67 @@
 @import "bootstrap";
+
 //= require_tree .
 
+@font-face {
+  font-family: "FiraCode Bold";
+  src: url('/assets/FireCode-Bold');
+}
+@font-face {
+  font-family: "FiraCode Light";
+  src: url('/assets/FireCode-Light');
+}
+@font-face {
+  font-family: "FiraCode Medium";
+  src: url('/assets/FireCode-Medium');
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url('/assets/FireCode');
+}
+
 body {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'FireCode', sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-  background-color: #1a1a1a;
+  background-color: #292d34;
   color: #fff;
   line-height: 1;
 }
 
+.h1 {
+  color: #222 !important;
+  font-size: 10vw;
+  text-shadow: 0px 2px 3px #555;
+  font-weight: bolder;
+}
+
+h2 {
+  color: #83bd62;
+  font-size: 4vw;
+}
+
+h3 {
+  color: #d39c51;
+  font-size: 3vw;
+}
+
+.h5 {
+  color: #a9493f;
+  font-size: 3vw;
+  font-family: 'FireCode Bold', sans-serif !important;
+  font-weight: bolder !important;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
 p {
+  color: #9da4b5;
   margin-bottom: .5rem;
+  font-size: 2.5vw;
+  font-weight: lighter;
 }
 
 // alerts
@@ -37,12 +87,16 @@ p {
   font-size: 1rem;
 }
 
-.nav.nav-masthead {
-background-color: #141414;
+.navbar.bg-dark {
+  background-color: #22262b !important;
+}
+
+.nav-link img {
+  height: 15vw;
 }
 
 .card-body  {
-  background-color: #fff;
+  background-color: #22262b;
   color: #1a1a1a;
 }
 
@@ -65,18 +119,41 @@ background-color: #141414;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
 }
 
 .large-home {
   background-image: url("/assets/code.png");
+  height: 200px;
 }
 
 .parallax-projects {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
   background-image: url("/assets/projects.png");
+  height: 400px;
+}
+
+div.features-clean {
+  background-color: #292d34;
+}
+
+.crud {
+  color: #9d79d1 !important;
+}
+/* unvisited link */
+a:link {
+    color: #a9493f;
+}
+
+/* visited link */
+a:visited {
+    color: #a9493f;
+}
+
+/* mouse over link */
+a:hover {
+    color: #83bd62;
+}
+
+/* selected link */
+a:active {
+    color: #83bd62;
 }

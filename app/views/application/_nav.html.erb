@@ -1,12 +1,11 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="row">
-    <%= link_to 'BruceNotLee', root_path, :class => "navbar-brand" %>
+<% @ruby = image_tag 'ruby' %>
+    <%= link_to @ruby+"<BruceNotLee>", root_path, :class => "h1 nav-link" %>
   </div>
   <div class="row">
-    <%= login_helper %>
+    <%= link_to "Projects", portfolios_path, :class => "h5 nav-link" %>
+    <%= link_to "Posts", blogs_path, :class => "h5 nav-link" %>
+    <%= login_helper "h5 nav-link" %>
   </div>
 </nav>
-<div class="row">
-  <%= link_to "Projects", portfolios_path, :class => "h5 nav-link" %>
-  <%= link_to "Posts", blogs_path, :class => "h5 nav-link" %>
-</div>

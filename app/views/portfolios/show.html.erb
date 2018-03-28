@@ -11,6 +11,6 @@
     <% end %>
   </ul>
   <div class="card-body">
-    <%= link_to "Edit", edit_portfolio_path(item), :class => "card-link" if logged_in?(:site_admin) %>
+    <%= link_to "Edit", edit_portfolio_path(item), :class => "card-link crud" if logged_in?(:site_admin) %>
   </div>
 </div>

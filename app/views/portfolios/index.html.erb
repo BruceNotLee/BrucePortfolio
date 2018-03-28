@@ -1,4 +1,4 @@
-<p><%= link_to "Create New Portfolio", new_portfolio_path if logged_in?(:site_admin) %></p>
+<p><%= link_to "Create New Portfolio", new_portfolio_path, :class => "crud" if logged_in?(:site_admin) %></p>
 <div class="projects-clean">
   <div class="container">
     <div class="intro">
